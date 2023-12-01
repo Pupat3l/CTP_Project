@@ -2,7 +2,7 @@ import React from "react"
 
 export default function Form() {
     const [formData, setFormData] = React.useState(
-        {title: "", lastName: "", email: "", comments: ""}
+        {title: "", lastName: "", email: "", comments: "", age:""}
     )
     
     console.log(formData.comments)
@@ -80,6 +80,13 @@ export default function Form() {
                 placeholder="Comments"
                 onChange={handleChange}
                 name="comments"
+            />
+            <input
+                type="text"
+                placeholder="age"
+                onChange={handleChange}
+                name="age"
+                value={formData.age}
             />
             <button>Submit api</button>
         </form>

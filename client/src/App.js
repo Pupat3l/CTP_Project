@@ -4,6 +4,7 @@ import PostsListPage from "./pages/PostsListPage";
 import PostFormPage from "./pages/PostFormPage";
 import ShowPostPage from "./pages/ShowPostPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import Form from "./components/Form"
 
 import "./App.css";
 
@@ -40,6 +41,11 @@ function Navigation(props) {
             </NavLink>
           </li>
           <li className="nav-item">
+            <NavLink className="nav-link" to="/form">
+              Form
+            </NavLink>
+          </li>
+          <li className="nav-item">
             <button className="btn btn-primary" onClick={handleClick}>
               Trigger eBay API
             </button>
@@ -54,6 +60,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navigation />
+      {/*<Form />*/}
       <div className="container-xl text-center">
         <div className="row justify-content-center">
           <Routes>
@@ -61,6 +68,7 @@ function App() {
             <Route path="/posts/:id" element={<ShowPostPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/" element={<PostsListPage />} />
+            <Route path="/form" element={<Form />} />
           </Routes>
         </div>
       </div>

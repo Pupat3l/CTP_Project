@@ -1,1 +1,30 @@
 /* Add custom CSS here */
+.form-group{
+    padding: 10px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    align-items: center;
+}
+.btn{
+    padding: 10px;
+}
+body{
+    background-color: aliceblue;
+    font-family: 'Raleway', serif;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    align-items: center;
+}
+nav.navbar {
+    border-bottom: 2px solid #000;
+    background-color: black;
+    font: size 1.2em;
+}
+nav.navbar a {
+    color: white;
+}
+

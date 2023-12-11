@@ -29,28 +29,30 @@ function Navigation(props) {
         <Link className="navbar-brand" to="/">
           Micro Blog
         </Link>
-        <ul className="navbar-nav me-auto">
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/posts/new">
-              Create a Micro Post
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/about-us">
-              About Us
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/form">
-              Form
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <button className="btn btn-primary" onClick={handleClick}>
-              Trigger eBay API
-            </button>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul className="navbar-nav me-auto nav-underline">
+            <li className="nav-item">
+              <NavLink className="nav-link text-white" to="/posts/new">
+                Create a Micro Post
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link text-white" to="/about-us">
+                About Us
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link text-white" to="/form">
+                Form
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <button className="btn btn-primary" onClick={handleClick}>
+                Trigger eBay API
+              </button>
+            </li>
+          </ul>
+          </div>
       </div>
     </nav>
   );

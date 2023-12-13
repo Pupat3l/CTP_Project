@@ -27,32 +27,25 @@ function Navigation(props) {
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark shadow mb-3">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          Micro Blog
+          MasterLister
         </Link>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <ul className="navbar-nav me-auto nav-underline">
-            <li className="nav-item">
-              <NavLink className="nav-link text-white" to="/posts/new">
-                Create a Micro Post
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link text-white" to="/about-us">
-                About Us
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link text-white" to="/form">
-                Form
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <button className="btn btn-primary" onClick={handleClick}>
-                Trigger eBay API
-              </button>
-            </li>
-          </ul>
-          </div>
+        {/* <ul className="navbar-nav me-auto">
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/posts/new">
+              Create a Micro Post
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/about-us">
+              About Us
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <button className="btn btn-primary" onClick={handleClick}>
+              Trigger eBay API
+            </button>
+          </li>
+        </ul> */}
       </div>
     </nav>
   );
@@ -62,7 +55,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navigation />
-      {/*<Form />*/}
+      <Form />
       <div className="container-xl text-center">
         <div className="row justify-content-center">
           <Routes>
@@ -70,7 +63,6 @@ function App() {
             <Route path="/posts/:id" element={<ShowPostPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/" element={<PostsListPage />} />
-            <Route path="/form" element={<Form />} />
           </Routes>
         </div>
       </div>

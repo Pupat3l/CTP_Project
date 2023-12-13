@@ -1,8 +1,18 @@
 const express = require("express");
 const router = express.Router();
 const EbayListing = require('../models').EbayListing
-
 const axios = require('axios');
+
+router.get('/', async (req, res) => {
+  try {
+    const listings = await EbayListing.findAll(); // Fetch all eBay listings from the database
+    res.json(listings); // Send the fetched listings as a JSON response
+  } catch (error) {
+    console.error('Error fetching eBay listings:', error);
+    res.status(500).json({ error: 'An error occurred while fetching eBay listings' });
+  }
+});
+
 
 router.post("/", async (req, res) => {
   try {
